@@ -1,0 +1,109 @@
+{
+  "rows": 20640,
+  "train_rows": 16512,
+  "test_rows": 4128,
+  "clusters": 6,
+  "classifier_agreement_with_kmeans": 0.9951550387596899,
+  "confusion_matrix": [
+    [
+      334,
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    [
+      1,
+      825,
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      2,
+      110,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      956,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      513,
+      0
+    ],
+    [
+      2,
+      2,
+      0,
+      0,
+      0,
+      1370
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.9881656804733728,
+      "recall": 0.9910979228486647,
+      "f1-score": 0.9896296296296296,
+      "support": 337.0
+    },
+    "1": {
+      "precision": 0.9939759036144579,
+      "recall": 0.9951749095295537,
+      "f1-score": 0.9945750452079566,
+      "support": 829.0
+    },
+    "2": {
+      "precision": 0.990990990990991,
+      "recall": 0.9821428571428571,
+      "f1-score": 0.9865470852017937,
+      "support": 112.0
+    },
+    "3": {
+      "precision": 0.9968717413972888,
+      "recall": 0.9937629937629938,
+      "f1-score": 0.9953149401353462,
+      "support": 962.0
+    },
+    "4": {
+      "precision": 0.9903474903474904,
+      "recall": 0.9980544747081712,
+      "f1-score": 0.9941860465116279,
+      "support": 514.0
+    },
+    "5": {
+      "precision": 0.9985422740524781,
+      "recall": 0.9970887918486172,
+      "f1-score": 0.9978150036416606,
+      "support": 1374.0
+    },
+    "accuracy": 0.9951550387596899,
+    "macro avg": {
+      "precision": 0.9931490134793465,
+      "recall": 0.9928869916401429,
+      "f1-score": 0.9930112917213357,
+      "support": 4128.0
+    },
+    "weighted avg": {
+      "precision": 0.9951635560120663,
+      "recall": 0.9951550387596899,
+      "f1-score": 0.9951559075886636,
+      "support": 4128.0
+    }
+  },
+  "interpretation": "Scores measure how closely the supervised classifier reproduces K-Means pseudo-labels; they are not accuracy against independently verified geographic regions."
+}

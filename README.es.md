@@ -74,11 +74,27 @@ DATABASE_URL="postgresql://mi_usuario:mi_contraseña@localhost:5432/mi_base_de_d
 
 ## Ejecutando la Aplicación
 
-Para ejecutar la aplicación, ejecuta el script app.py desde la raíz del directorio del proyecto:
+El flujo de agrupación de California Housing carga `data/raw/housing.csv` (Latitude,
+Longitude y MedInc), divide los datos en entrenamiento y prueba, ajusta un K-Means de
+6 clusters y entrena un clasificador Random Forest para reproducir esas etiquetas.
+Ejecuta el script desde la raíz del proyecto:
 
 ```bash
 python src/app.py
 ```
+
+El CSV se puede descargar desde
+`https://breathecode.herokuapp.com/asset/internal-link?id=809&path=housing.csv`
+y debe guardarse como `data/raw/housing.csv`. El script genera:
+
+- `models/kmeans_housing.joblib` y `models/housing_cluster_classifier.joblib`.
+- `data/processed/housing_clusters.csv` con el cluster asignado a cada fila.
+- `data/processed/housing_clusters.png` con los puntos de train y test.
+- `data/processed/metrics.json` con la matriz de confusión y estadísticas.
+
+La puntuación del clasificador mide su acuerdo con las etiquetas pseudo-generadas por
+K-Means; no representa exactitud frente a regiones reales etiquetadas de forma
+independiente. Los clusters también dependen del escalado y de las variables elegidas.
 
 ## Añadiendo Modelos
 
